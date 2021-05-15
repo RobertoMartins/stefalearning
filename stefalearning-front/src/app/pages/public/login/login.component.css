@@ -1,0 +1,28 @@
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-home{
+  width: 80%;
+}
+
+.title{
+  margin-bottom:60px;
+  text-align: center;
+  color:rgb(24, 102, 204)
+}
+.sub{
+  margin-bottom: 30px;
+  color: rgb(153, 153, 153);
+}
+
+.content {
+  padding: 80px 20px;
+}
+
+.form-login{
+  width: 60%;
+}
+

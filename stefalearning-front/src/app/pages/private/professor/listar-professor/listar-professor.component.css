@@ -1,0 +1,35 @@
+.m-top {
+    margin-top: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.titulo-painel {
+    text-align: center;
+}
+
+.title-header-public {
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.title {
+    margin-bottom: 25px;
+    text-align: center;
+    color: rgb(24, 102, 204);
+}
+
+.sub {
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.dados{
+    font-size: 20px;
+}
+
+.content {
+    padding-top: 20px;
+}

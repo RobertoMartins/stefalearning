@@ -1,0 +1,30 @@
+<div class="container box">
+  <div class="content">
+    <h2 class="title">Bem vindo(a) a StefaLearning</h2>
+    <div class="row">
+      <div class="col-md-5 box">
+        <img src="assets/img-home.png" class="img-home">
+      </div>
+      <div class="col">
+        <div class="box">
+          <h5 class="sub">Venha fazer parte da melhor plataforma de<br/> ensino EAD</h5>
+        </div>
+        <div class="box">
+          <form [formGroup]="loginForm" (ngSubmit)="login()" class="form-login">
+            <div class="mb-3">
+              <label for="tx-email" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="tx-email" />
+            </div>
+            <div class="mb-3">
+              <label for="pwd-senha" class="form-label">Senha</label>
+              <input type="password" formControlName="senha" class="form-control" id="pwd-senha" />
+            </div>
+            <button type="submit" class="btn btn-primary mr-5">Login</button>
+            <a href="/nova-conta" class="btn btn-outline-primary">Criar Conta</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

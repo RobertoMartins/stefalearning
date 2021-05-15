@@ -1,0 +1,22 @@
+
+<div class="container pt-3">
+    <p>Curso:<strong>{{curso.nome}}</strong></p>
+    <h2>{{textoTitle}}</h2>
+    <div class="pt-3">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" [(ngModel)]="aula.nome">
+        </div>
+        <div class="mb-3">
+            <label for="duracao" class="form-label" >Duração (Min)</label>
+            <input type="number" class="form-control col-sm-2" id="duracao" [(ngModel)]="aula.duracao">
+        </div>
+        <div class="mb-3">
+            <label for="topicos" class="form-label">Topicos</label>
+            <input type="text" class="form-control" id="topicos" [(ngModel)]="topicosForm" placeholder="Ex: Topico1;Topico2...">
+        </div>
+        <button class="btn btn-primary" (click)="cadastrar()">{{textoBotao}}</button>
+
+    </div>
+
+</div>

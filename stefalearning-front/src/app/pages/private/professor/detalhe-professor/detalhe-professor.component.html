@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="content">
+        <h2  class="titulo-painel title">Perfil do Professor</h2>
+        <div class="row m-top">
+            <div class="col">
+                <p class="dados">Nome: <strong>{{professor.nome}}</strong></p>
+            </div>
+            <div class="col ">
+                <p class="dados">Email: <strong>{{professor.email}}</strong></p>
+            </div>
+        </div>
+    
+        <h4 class="titulo-painel m-top">Cursos que está lecionando</h4>
+        <p style="text-align: center;" *ngIf="profCursos.length===0">Não está lecionando nenhum curso.<a style="color: royalblue; cursor: pointer;" [routerLink]="['/cursos']"> Ver todos cursos disponiveis plataforma</a></p>
+    
+        <table class="table m-top" *ngIf="profCursos.length>0">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of profCursos">
+                    <td><a [routerLink]="['cursos/detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
+                    <td>{{c.descricao}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="content">
+        <h2 class="titulo-painel title">Todos alunos cadastrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Detalhes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of alunos">
+                    <th scope="row"></th>
+                    <td><a [routerLink]="['detalhe-aluno/'+a.id]"> {{a.nome}}</a></td>
+                    <td>{{a.email}}</td>
+                    <td><a [routerLink]="['detalhe-aluno',a.id]" href="#" class="btn btn-primary">Ver detalhes</a></td>
+                    <td *ngIf="usuario.tipo===1"><button class="btn btn-outline-danger"(click)="excluirAluno(a.id)">Excluir</button></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="content">
+        <h2  class="titulo-painel title">Perfil do Aluno</h2>
+        <div class="row m-top">
+            <div class="col">
+                <p class="dados">Nome: <strong>{{aluno.nome}}</strong></p>
+            </div>
+            <div class="col ">
+                <p class="dados">Formação: <strong>{{aluno.formacao}}</strong></p>
+            </div>
+            <div class="col-sm-3 ">
+                <p class="dados">Idade: <strong>{{aluno.idade}}</strong></p>
+            </div>
+        </div>
+    
+        <h4 class="titulo-painel m-top">Cursos que está matriculado</h4>
+        <p style="text-align: center;">Não está matriculado em nenhum curso.<a style="color: royalblue; cursor: pointer;" [routerLink]="['/cursos']"> Ver todos cursos disponiveis plataforma</a></p>
+    
+        <table class="table m-top" *ngIf="cursos.length>0">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of cursos">
+                    <td><a [routerLink]="['cursos/detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
+                    <td>{{c.descricao}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

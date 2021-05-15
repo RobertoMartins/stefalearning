@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="content">
+        <h2 class="titulo-painel title ">Detalhes do curso</h2>
+        <div class="row">
+            <div class="col">
+                <p class="dados">Nome: <strong>{{curso.nome}}</strong></p>
+                <p class="dados">Professor: <strong>{{professor.nome}}</strong></p>
+            </div>
+            <div class="col" *ngIf="usuario.tipo===1 && usuario.id===curso.idProfessor">
+                <a class="btn btn-primary" [routerLink]="['nova-aula']">Adicionar aulas</a>
+                <a class="btn btn-secondary" [routerLink]="['/cursos/novo-curso/'+curso.id]">Editar Curso</a>
+                <button class="btn btn-danger" (click)="excluirCurso(curso.id)">Excluir curso</button>
+            </div>
+            <div class="col" *ngIf="usuario.tipo===2">
+                <button class="btn btn-primary" *ngIf="!isMatriculado" (click)="matricular(curso.id)">Matricular nesse curso</button> 
+                <button class="btn btn-danger" *ngIf="isMatriculado"(click)="desmatricular(curso.id)">Cancelar matricula</button> 
+            </div>
+        </div>
+        <h4 class="titulo-painel m-top">Aulas do curso:</h4>
+        <div *ngIf="curso.aulas.length===0">
+            <p class="empty">O curso ainda não possui aulas</p>
+        </div>
+        <table class="table" *ngIf="!(curso.aulas.length===0)">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Duração</th>
+                    <th>Topicos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of curso.aulas">
+                    <td>Aula {{curso.aulas.indexOf(a)+1}}</td>
+                    <td>{{a.nome}}</td>
+                    <td>{{a.duracao}}min</td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let t of a.topicos">{{t}}</li>
+                        </ul>
+                    </td>
+                    <td><button class="btn btn-outline-danger" (click)="removerAula(a.id)" *ngIf="usuario.tipo===1 && usuario.id===curso.idProfessor">Remover aula</button></td>
+                    <td><a class="btn btn-outline-secondary" [routerLink]="['nova-aula/'+a.id]"  *ngIf="usuario.tipo===1 && usuario.id===curso.idProfessor">Editar aula</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h4 class="titulo-painel m-top">Alunos Matriculados:</h4>
+        <div *ngIf="alunos.length===0">
+            <p class="empty">O curso ainda não possui alunos matriculados</p>
+        </div>
+        <table class="table" *ngIf="!(alunos.length===0)">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Formação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of alunos">
+                    <td><a [routerLink]="['/alunos/detalhe-aluno/'+a.id]">{{a.nome}}</a></td>
+                    <td>{{a.email}}</td>
+                    <td>{{a.formacao}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

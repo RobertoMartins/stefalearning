@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="content">
+        <h2 *ngIf="usuario.tipo===1" class="titulo-painel title ">Painel do Professor</h2>
+        <h2 *ngIf="usuario.tipo===2" class="titulo-painel title">Painel do Aluno</h2>
+        <div class="row m-top">
+            <div class="col ">
+                <p>Bem vindo,</p>
+                <h3>{{usuario.nome}}</h3>
+            </div>
+            <div class="col" *ngIf="usuario.tipo===1">
+                <a [routerLink]="['professores/alterar-professor/'+usuario.id]" class="btn btn-secondary" style="color:seashell; float:right;">
+                    Editar meus dados</a>
+            </div>
+            <div class="col" *ngIf="usuario.tipo===2">
+                <a [routerLink]="['alunos/alterar-aluno/'+usuario.id]" class="btn btn-secondary" style="color:seashell; float:right;">
+                    Editar meus dados</a>
+            </div>
+        </div>
+
+        <h4 class="titulo-painel m-top" *ngIf="usuario.tipo===1">Cursos que está lecionando</h4>
+        <h4 class="titulo-painel" *ngIf="usuario.tipo===2">Cursos que está matriculado</h4>
+
+
+        <p style="text-align: center;" *ngIf="cursos.length===0">Não possui cursos ainda.<a [routerLink]="['/cursos']">
+                Ver todos cursos disponiveis plataforma</a></p>
+
+
+        <table class="table" *ngIf="cursos.length>0">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of cursos">
+                    <td><a [routerLink]="['cursos/detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
+                    <td>{{c.descricao}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

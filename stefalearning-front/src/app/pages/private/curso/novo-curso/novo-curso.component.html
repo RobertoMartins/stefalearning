@@ -1,0 +1,16 @@
+<div class="container pt-3">
+    <h2>{{title}}</h2>
+    <div class="pt-3">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" [(ngModel)]="curso.nome">
+        </div>
+        <div class="mb-3">
+            <label for="descricao" class="form-label" >Descricao</label>
+            <input type="text" class="form-control" id="descricao" [(ngModel)]="curso.descricao">
+        </div>
+        <button class="btn btn-primary" (click)="cadastrarCurso()">{{buttonText}}</button>
+
+    </div>
+
+</div>

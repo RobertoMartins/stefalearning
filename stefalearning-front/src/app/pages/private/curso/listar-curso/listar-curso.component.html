@@ -1,0 +1,26 @@
+<div class="container">
+
+ <a [routerLink]="['novo-curso']" class="btn btn-primary" *ngIf="usuario.tipo===1">Novo curso</a>
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Descriçao</th>
+                <th scope="col">Professor</th>
+                <th scope="col">Detalhes</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of cursos">
+                <td><a [routerLink]="['detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
+                <td>{{c.descricao}}</td>
+                <td> <a [routerLink]="['/professores/detalhe-professor/',getProfessor(c.idProfessor).id]" *ngIf="c.idProfessor!==professor.id"> {{getProfessor(c.idProfessor).nome}}</a>
+                    <p *ngIf="c.idProfessor===professor.id">Eu</p>
+                </td>
+                <td><a [routerLink]="['detalhe-curso',c.id]" href="#" class="btn btn-primary">Ver detalhes</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

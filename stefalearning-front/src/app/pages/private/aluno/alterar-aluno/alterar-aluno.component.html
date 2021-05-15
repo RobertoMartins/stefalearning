@@ -1,0 +1,29 @@
+
+<div class="container">
+
+    <div class="content">
+        <div>
+            <p style="font-size: 10px; color: darkgrey;">Campos Obrigatórios: *</p>
+            <label for="nome" class="form-label" style="margin-top: 5px;">* Nome:</label>
+            <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]="aluno.nome">
+            <div>
+                <label for="formacao" class="form-label" style="margin-top: 5px;">* Formacao:</label>
+                <input type="text" class="form-control" name="formacao" id="formacao" [(ngModel)]="aluno.formacao">
+
+                <label for="idade" class="form-label" style="margin-top: 5px;">* Idade:</label>
+                <input type="number" class="form-control" name="idade" id="idade" [(ngModel)]="aluno.idade">
+            </div>
+            <label for="email" class="form-label" style="margin-top: 5px;">* Email:</label>
+            <input type="email" class="form-control" name="email" id="descricao" [(ngModel)]="aluno.email">
+
+
+
+            <label for="preco" class="form-label" style="margin-top: 5px;">* Senha:</label>
+            <input type="password" class="form-control" name="senha" id="senha" [(ngModel)]="aluno.senha">
+
+
+            <button type="button" class="btn btn-primary" style="margin-top:30px;"
+              (click)="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+</div>
