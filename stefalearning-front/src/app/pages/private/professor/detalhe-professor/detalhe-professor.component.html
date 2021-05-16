@@ -22,7 +22,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let c of profCursos">
-                    <td><a [routerLink]="['cursos/detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
+                    <td><a [routerLink]="['/cursos/detalhe-curso/'+c.id]"> {{c.nome}}</a></td>
                     <td>{{c.descricao}}</td>
                 </tr>
             </tbody>

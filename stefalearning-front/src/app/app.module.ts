@@ -23,7 +23,7 @@ import { ListarCursoComponent } from './pages/private/curso/listar-curso/listar-
 import { NovoCursoComponent } from './pages/private/curso/novo-curso/novo-curso.component';
 import { CommonModule } from '@angular/common';
 import { DetalheCursoComponent } from './pages/private/curso/detalhe-curso/detalhe-curso.component';
-import { NovaAulaComponent } from './nova-aula/nova-aula.component';
+import { NovaAulaComponent } from './pages/private/curso/nova-aula/nova-aula.component';
 import { AlterarProfessorComponent } from './pages/private/professor/alterar-professor/alterar-professor.component';
 import { AlterarAlunoComponent } from './pages/private/aluno/alterar-aluno/alterar-aluno.component';
 

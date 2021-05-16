@@ -12,7 +12,7 @@ import { ListarAlunoComponent } from './pages/private/aluno/listar-aluno/listar-
 import { DetalheCursoComponent } from './pages/private/curso/detalhe-curso/detalhe-curso.component';
 import { ListarCursoComponent } from './pages/private/curso/listar-curso/listar-curso.component';
 import { NovoCursoComponent } from './pages/private/curso/novo-curso/novo-curso.component';
-import { NovaAulaComponent } from './nova-aula/nova-aula.component';
+import { NovaAulaComponent } from './pages/private/curso/nova-aula/nova-aula.component';
 import { AlterarProfessorComponent } from './pages/private/professor/alterar-professor/alterar-professor.component';
 import { AlterarAlunoComponent } from './pages/private/aluno/alterar-aluno/alterar-aluno.component';
 
