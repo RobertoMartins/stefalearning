@@ -1,4 +1,4 @@
-# Funcionalidades exigidas no desafio
+# Funcionalidades
 
 ## Professor:
 
@@ -41,7 +41,3 @@ Incluir => incluir uma aula seguindo as seguintes regras: Não permitir incluir 
 Alterar => alterar uma aula seguindo as seguintes regras: Validar obrigatoriedade dos campos nome, duracao, curso e topicos, somente um professor pode alterar uma aula.
 
 Excluir => excluir uma aula seguindo as seguintes regras: somente um professor pode excluir uma aula.
-
-## Avaliação Curso
-
-Criar funcionalidade para o aluno avaliar o curso seguindo as seguintes regras: a nota vai de 0 a 5, somente uma avaliação por aluno, o aluno pode alterar sua nota de avaliação, professor não pode avaliar o curso.
