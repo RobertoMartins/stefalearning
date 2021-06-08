@@ -80,7 +80,7 @@ Para rodar o projeto é necessario executar as seguintes etapas:
 Feito isso, digite os comandos:
 
 ```sh
-  $ cd stefaleraning-back # para acessar a pasta onde está o projeto do back-end.
+  $ cd stefalearning-back # para acessar a pasta onde está o projeto do back-end.
   $ npm install # para instalar todas dependenias necessárias.
   $ npm start # para rodar a aplicação.
 ```
@@ -93,7 +93,7 @@ Feito isso, digite os comandos:
 Feito isso, digite os comandos:
 
 ```sh
-  $ cd stefaleraning-front # para acessar a pasta onde está o projeto do front-end.
+  $ cd stefalearning-front # para acessar a pasta onde está o projeto do front-end.
   $ npm install # para instalar todas dependenias necessárias.
   $ npm start # para rodar a aplicação.
 ```
