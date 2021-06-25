@@ -3,7 +3,7 @@
 ## StefaLearning
 
 Stefalearning é aplicação web que simula uma plataforma de ensino EAD. Possui alunos, professores, cursos e aulas. Foi desenvonvida uma API REST com NodeJS + Express. E o front-end com Angular 11 + Bootstrap. Todo o projeto foi escrito com a linguagem TypesScript.
-Esse projeto foi desenvolvido como desafio final do Hackaton de Desenvolvimento 2021 organizado pela Stefanini.
+Esse projeto foi desenvolvido como desafio final do Hackaton de Desenvolvimento 2021 organizado pela <a href="https://stefanini.com/pt-br">Stefanini</a>.
 
 ## :hammer: Ferramentas & Tecnologias
 ![Nodejs](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white)
